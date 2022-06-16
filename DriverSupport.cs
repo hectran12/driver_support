@@ -151,13 +151,7 @@ namespace ConsoleApp1
         public JObject create_chromedriver(int session,ChromeDriverService service = null, ChromeOptions options = null)
         {
             ChromeDriver drivers = null;
-            if(service != null)
-            {
-                drivers = new ChromeDriver(service);
-            } else if(options != null)
-            {
-                drivers = new ChromeDriver(options);
-            } else if(service != null || options != null)
+            if(service != null || options != null)
             {
                 drivers = new ChromeDriver(service, options);
             } else
